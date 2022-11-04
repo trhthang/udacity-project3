@@ -32,4 +32,4 @@ jobs:
     - run: docker push trhthang/udagram-api-user:v1
     - run: docker push trhthang/udagram-api-feed:v1
     - run: docker push trhthang/reverseproxy:v1
-
+#author : Thang Tran
