@@ -22,5 +22,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: echo "Hello Thang"
-    - run: ls -l 
+    - run: docker-compose -f docker-compose-build.yml build --parallel
+    - run: docker tag udagram-frontend:local trhthang/udagram-frontend:v1
+    - run: docker tag udagram-api-user trhthang/udagram-api-user:v1
+    - run: docker tag udagram-api-feed trhthang/udagram-api-feed:v1
+    - run: docker tag reverseproxy trhthang/reverseproxy:v1
+    - run: docker push trhthang/udagram-frontend:v1
+    - run: docker push trhthang/udagram-api-user:v1
+    - run: docker push trhthang/udagram-api-feed:v1
+    - run: docker push trhthang/reverseproxy:v1
 
