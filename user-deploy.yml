@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: backend-user
+
+  labels:
+
+    app: backend-user
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app: backend-user
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: backend-user
+
+    spec:
+
+      containers:
+
+      - name: backend-user
+
+        image: trhthang/udagram-api-user
+
+        ports:
+
+        - containerPort: 8080
+        
+        envFrom:
+        - configMapRef:
+          name: udagram-env
+        - secretRef:
+          name: udagramdb-env
