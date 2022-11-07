@@ -1,14 +1,27 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: udagram-env
+# data:
+#   AWS_REGION: us-east-1
+#   POSTGRES_HOST: udagram-prj3-instance.ck3igafc7oym.us-east-1.rds.amazonaws.com
+#   POSTGRES_DB: udagramdb
+#   AWS_BUCKET: udagram-prj3-insta
+#   AWS_PROFILE: default
+#   JWT_SECRET: testing
+#   URL: http://localhost:8100
+  
+
+
 apiVersion: v1
 kind: ConfigMap
-metadata:
-  name: udagram-env
 data:
-  # property-like keys; each key maps to a simple value
-  AWS_REGION: us-east-1
-  POSTGRES_HOST: udagram-prj3-instance.ck3igafc7oym.us-east-1.rds.amazonaws.com
-  POSTGRES_DB: udagramdb
-  AWS_BUCKET: udagram-prj3-insta
+  AWS_BUCKET: udagram-ins
   AWS_PROFILE: default
+  AWS_REGION: us-east-1
   JWT_SECRET: testing
+  POSTGRES_DB: udagramdb
+  POSTGRES_HOST: udagram-instance.c1i4g2tu4hqd.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
-  
+metadata:
+  name: env-config
