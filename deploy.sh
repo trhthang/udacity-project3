@@ -13,3 +13,14 @@ kubectl apply -f feed-deploy.yml
 kubectl apply -f user-deploy.yml
 kubectl apply -f reverseproxy-deploy.yml
 kubectl apply -f frontend-deploy.yml
+
+
+kubectl apply -f feed-service.yml
+kubectl apply -f user-service.yml
+kubectl apply -f reverseproxy-service.yml
+kubectl apply -f frontend-service.yml
+
+kubectl delete service user-service.yml
+kubectl delete service reverseproxy-service.yml
+kubectl delete service feed-service.yml
+kubectl delete service frontend-service.yml
