@@ -9,4 +9,4 @@ data:
   POSTGRES_HOST: udagram-instance.c1i4g2tu4hqd.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
 metadata:
-  name: env-config
+  name: udagram-env
